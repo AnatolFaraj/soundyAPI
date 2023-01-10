@@ -59,3 +59,7 @@ G:\csharp2\soundyAPI\SoundyAPI\WebAPI\obj\Debug\net5.0\WebAPI.dll
 G:\csharp2\soundyAPI\SoundyAPI\WebAPI\obj\Debug\net5.0\ref\WebAPI.dll
 G:\csharp2\soundyAPI\SoundyAPI\WebAPI\obj\Debug\net5.0\WebAPI.pdb
 G:\csharp2\soundyAPI\SoundyAPI\WebAPI\obj\Debug\net5.0\WebAPI.genruntimeconfig.cache
+G:\csharp2\soundyAPI\SoundyAPI\WebAPI\bin\Debug\net5.0\Core.dll
+G:\csharp2\soundyAPI\SoundyAPI\WebAPI\bin\Debug\net5.0\DAL.dll
+G:\csharp2\soundyAPI\SoundyAPI\WebAPI\bin\Debug\net5.0\DAL.pdb
+G:\csharp2\soundyAPI\SoundyAPI\WebAPI\bin\Debug\net5.0\Core.pdb

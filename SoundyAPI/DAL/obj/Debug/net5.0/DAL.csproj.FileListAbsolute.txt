@@ -1,0 +1,15 @@
+G:\csharp2\soundyAPI\SoundyAPI\DAL\bin\Debug\net5.0\DAL.deps.json
+G:\csharp2\soundyAPI\SoundyAPI\DAL\bin\Debug\net5.0\DAL.dll
+G:\csharp2\soundyAPI\SoundyAPI\DAL\bin\Debug\net5.0\ref\DAL.dll
+G:\csharp2\soundyAPI\SoundyAPI\DAL\bin\Debug\net5.0\DAL.pdb
+G:\csharp2\soundyAPI\SoundyAPI\DAL\bin\Debug\net5.0\Core.dll
+G:\csharp2\soundyAPI\SoundyAPI\DAL\bin\Debug\net5.0\Core.pdb
+G:\csharp2\soundyAPI\SoundyAPI\DAL\obj\Debug\net5.0\DAL.csproj.AssemblyReference.cache
+G:\csharp2\soundyAPI\SoundyAPI\DAL\obj\Debug\net5.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+G:\csharp2\soundyAPI\SoundyAPI\DAL\obj\Debug\net5.0\DAL.AssemblyInfoInputs.cache
+G:\csharp2\soundyAPI\SoundyAPI\DAL\obj\Debug\net5.0\DAL.AssemblyInfo.cs
+G:\csharp2\soundyAPI\SoundyAPI\DAL\obj\Debug\net5.0\DAL.csproj.CoreCompileInputs.cache
+G:\csharp2\soundyAPI\SoundyAPI\DAL\obj\Debug\net5.0\DAL.csproj.CopyComplete
+G:\csharp2\soundyAPI\SoundyAPI\DAL\obj\Debug\net5.0\DAL.dll
+G:\csharp2\soundyAPI\SoundyAPI\DAL\obj\Debug\net5.0\ref\DAL.dll
+G:\csharp2\soundyAPI\SoundyAPI\DAL\obj\Debug\net5.0\DAL.pdb

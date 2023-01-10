@@ -1,0 +1,12 @@
+G:\csharp2\soundyAPI\SoundyAPI\BLL\bin\Debug\net5.0\BLL.deps.json
+G:\csharp2\soundyAPI\SoundyAPI\BLL\bin\Debug\net5.0\BLL.dll
+G:\csharp2\soundyAPI\SoundyAPI\BLL\bin\Debug\net5.0\ref\BLL.dll
+G:\csharp2\soundyAPI\SoundyAPI\BLL\bin\Debug\net5.0\BLL.pdb
+G:\csharp2\soundyAPI\SoundyAPI\BLL\obj\Debug\net5.0\BLL.csproj.AssemblyReference.cache
+G:\csharp2\soundyAPI\SoundyAPI\BLL\obj\Debug\net5.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+G:\csharp2\soundyAPI\SoundyAPI\BLL\obj\Debug\net5.0\BLL.AssemblyInfoInputs.cache
+G:\csharp2\soundyAPI\SoundyAPI\BLL\obj\Debug\net5.0\BLL.AssemblyInfo.cs
+G:\csharp2\soundyAPI\SoundyAPI\BLL\obj\Debug\net5.0\BLL.csproj.CoreCompileInputs.cache
+G:\csharp2\soundyAPI\SoundyAPI\BLL\obj\Debug\net5.0\BLL.dll
+G:\csharp2\soundyAPI\SoundyAPI\BLL\obj\Debug\net5.0\ref\BLL.dll
+G:\csharp2\soundyAPI\SoundyAPI\BLL\obj\Debug\net5.0\BLL.pdb
