@@ -9,11 +9,16 @@ using System.Threading.Tasks;
 
 namespace DAL.Configurations
 {
-    public class CredentialsConfiguration : IEntityTypeConfiguration<CategoryModel>
+    public class CredentialsConfiguration : IEntityTypeConfiguration<CredentialsModel>
     {
-        public void Configure(EntityTypeBuilder<CategoryModel> builder)
+        public void Configure(EntityTypeBuilder<CredentialsModel> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(x => x.UserId);
+
+            builder.HasOne(x => x.User)
+                .WithOne(x => x.Credential)
+                .HasForeignKey<CredentialsModel>(x => x.UserId);
+
         }
     }
 }

@@ -24,6 +24,9 @@ namespace DAL.Data
         public DbSet<TrackDetailModel> TrackDetails { get; set; }
         public DbSet<TrackModel> Tracks { get; set; }
         public DbSet<UserModel> Users { get; set; }
+        public DbSet<UserAlbumModel> UserAlbums { get; set; }
+        public DbSet<UserArtistModel> UserArtists { get; set; }
+        public DbSet<PlaylistTrackModel> PlaylistTracks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -35,6 +38,9 @@ namespace DAL.Data
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
             modelBuilder.ApplyConfiguration(new ArtistConfiguration());
             modelBuilder.ApplyConfiguration(new AlbumConfiguration());
+            modelBuilder.ApplyConfiguration(new UserAlbumConfiguration());
+            modelBuilder.ApplyConfiguration(new UserArtistConfiguration());
+            modelBuilder.ApplyConfiguration(new PlaylistTrackConfiguration());
         }
 
     }

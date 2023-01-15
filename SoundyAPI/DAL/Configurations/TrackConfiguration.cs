@@ -17,6 +17,23 @@ namespace DAL.Configurations
             builder.HasOne(x => x.TrackDetail)
                 .WithOne(x => x.Track);
 
+            builder.HasOne(x => x.Artist)
+                .WithMany(x => x.Tracks)
+                .HasForeignKey(x => x.ArtistId);
+
+            builder.HasOne(x => x.Album)
+                .WithMany(x => x.Tracks)
+                .HasForeignKey(x => x.AlbumId);
+
+            builder.HasOne(x => x.Category)
+                .WithMany(x => x.Tracks)
+                .HasForeignKey(x => x.CategoryId);
+
+            builder.HasMany(x => x.PlaylistTracks)
+                .WithOne(x => x.Track);
+                
+
+
                 
         }
      }

@@ -17,7 +17,7 @@ namespace Core.Models
         public DateTime? ReleaseDate { get; set; }
         public long Listenings { get; set; }
         public string Picture { get; set; }
-        public ICollection<UserModel> Users { get; set; }
+        public ICollection<UserAlbumModel> UserAlbums { get; set; }
         public ICollection<TrackModel> Tracks { get; set; }
 
 

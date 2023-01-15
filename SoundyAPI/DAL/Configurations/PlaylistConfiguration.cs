@@ -12,7 +12,14 @@ namespace DAL.Configurations
     {
         public void Configure(EntityTypeBuilder<PlaylistModel> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(k => k.Id);
+
+            builder.HasOne(x => x.User)
+                .WithMany(x => x.Playlists)
+                .HasForeignKey(x => x.UserId);
+
+            builder.HasMany(x => x.PlaylistTracks)
+                .WithOne(x => x.Playlist);
         }
      }
 }

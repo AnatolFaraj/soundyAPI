@@ -63,3 +63,5 @@ G:\csharp2\soundyAPI\SoundyAPI\WebAPI\bin\Debug\net5.0\Core.dll
 G:\csharp2\soundyAPI\SoundyAPI\WebAPI\bin\Debug\net5.0\DAL.dll
 G:\csharp2\soundyAPI\SoundyAPI\WebAPI\bin\Debug\net5.0\DAL.pdb
 G:\csharp2\soundyAPI\SoundyAPI\WebAPI\bin\Debug\net5.0\Core.pdb
+G:\csharp2\soundyAPI\SoundyAPI\WebAPI\bin\Debug\net5.0\BLL.dll
+G:\csharp2\soundyAPI\SoundyAPI\WebAPI\bin\Debug\net5.0\BLL.pdb

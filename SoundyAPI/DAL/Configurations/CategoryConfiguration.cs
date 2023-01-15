@@ -13,7 +13,20 @@ namespace DAL.Configurations
     {
         public void Configure(EntityTypeBuilder<CategoryModel> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(x => x.Id);
+
+            builder.HasMany(x => x.Albums)
+                .WithOne(x => x.Category)
+                .HasForeignKey(x => x.CategoryId);
+
+            builder.HasMany(x => x.Artists)
+                .WithOne(x => x.Category)
+                .HasForeignKey(x => x.CategoryId);
+
+            builder.HasMany(x => x.Tracks)
+                .WithOne(x => x.Category)
+                .HasForeignKey(x => x.CategoryId);
+                
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Core.Models
         public long ListeningsLastMonth { get; set; }
         public ICollection<AlbumModel> Albums { get; set; }
         public ICollection<TrackModel> Tracks { get; set; }
-        public ICollection<UserModel> Users { get; set; }
+        public ICollection<UserArtistModel> UserArtists { get; set; }
 
     }
 }

@@ -21,11 +21,11 @@ namespace DAL.Configurations
             builder.HasMany(x => x.Playlists)
                 .WithOne(x => x.User);
 
-            builder.HasMany(x => x.Artists)
-                .WithMany(x => x.Users);
+            builder.HasMany(x => x.UserArtists)
+                .WithOne(x => x.User);
 
-            builder.HasMany(x => x.Albums)
-                .WithMany(x => x.Users);
+            builder.HasMany(x => x.UserAlbums)
+                .WithOne(x => x.User);
 
         }
     }

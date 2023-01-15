@@ -14,7 +14,7 @@ namespace Core.Models
         public string Name { get; set; }
         public UserType UserType { get; set; }
         public ICollection<PlaylistModel> Playlists { get; set; }
-        public ICollection<ArtistModel> Artists { get; set; }
-        public ICollection<AlbumModel> Albums { get; set; }
+        public ICollection<UserArtistModel> UserArtists { get; set; }
+        public ICollection<UserAlbumModel> UserAlbums { get; set; }
     }
 }

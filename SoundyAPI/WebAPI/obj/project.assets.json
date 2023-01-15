@@ -1594,6 +1594,20 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "BLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Core": "1.0.0",
+          "DAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BLL.dll": {}
+        }
+      },
       "Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -5994,6 +6008,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "BLL/1.0.0": {
+      "type": "project",
+      "path": "../BLL/BLL.csproj",
+      "msbuildProject": "../BLL/BLL.csproj"
+    },
     "Core/1.0.0": {
       "type": "project",
       "path": "../Core/Core.csproj",
@@ -6007,6 +6026,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "BLL >= 1.0.0",
       "DAL >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.17",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.17",
@@ -6042,6 +6062,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "G:\\csharp2\\soundyAPI\\SoundyAPI\\BLL\\BLL.csproj": {
+              "projectPath": "G:\\csharp2\\soundyAPI\\SoundyAPI\\BLL\\BLL.csproj"
+            },
             "G:\\csharp2\\soundyAPI\\SoundyAPI\\DAL\\DAL.csproj": {
               "projectPath": "G:\\csharp2\\soundyAPI\\SoundyAPI\\DAL\\DAL.csproj"
             }
