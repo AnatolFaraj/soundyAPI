@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "I9mIgV3VHmUAgICkONZe30WPcFY/+BVs97cuGwU/vCeN/+D8b/bcJCNza5X7UXzxtoTz6t6Ui/AWlTS6YXITog==",
+  "success": true,
+  "projectFilePath": "G:\\csharp2\\soundyAPI\\SoundyAPI\\LoggerService\\LoggerService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Tolyakipyatok\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.0\\microsoft.extensions.configuration.3.1.0.nupkg.sha512",
+    "C:\\Users\\Tolyakipyatok\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.0\\microsoft.extensions.configuration.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\Tolyakipyatok\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.0\\microsoft.extensions.configuration.binder.3.1.0.nupkg.sha512",
+    "C:\\Users\\Tolyakipyatok\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.0\\microsoft.extensions.dependencyinjection.3.1.0.nupkg.sha512",
+    "C:\\Users\\Tolyakipyatok\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.0\\microsoft.extensions.dependencyinjection.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\Tolyakipyatok\\.nuget\\packages\\microsoft.extensions.logging\\3.1.0\\microsoft.extensions.logging.3.1.0.nupkg.sha512",
+    "C:\\Users\\Tolyakipyatok\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.0\\microsoft.extensions.logging.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\Tolyakipyatok\\.nuget\\packages\\microsoft.extensions.options\\3.1.0\\microsoft.extensions.options.3.1.0.nupkg.sha512",
+    "C:\\Users\\Tolyakipyatok\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.0\\microsoft.extensions.primitives.3.1.0.nupkg.sha512",
+    "C:\\Users\\Tolyakipyatok\\.nuget\\packages\\nlog\\5.1.1\\nlog.5.1.1.nupkg.sha512",
+    "C:\\Users\\Tolyakipyatok\\.nuget\\packages\\nlog.extensions.logging\\5.2.1\\nlog.extensions.logging.5.2.1.nupkg.sha512",
+    "C:\\Users\\Tolyakipyatok\\.nuget\\packages\\nlog.web.aspnetcore\\5.2.1\\nlog.web.aspnetcore.5.2.1.nupkg.sha512"
+  ],
+  "logs": []
+}

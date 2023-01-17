@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JyFXbp0r7eVCzHdmuhduaTZl9eq/or5MPDWWXgoCrPwx6rBCtd9fdzEe7jCZuDDTrkzoEjLvppns9zDiRiWJtw==",
+  "dgSpecHash": "DqmQWnby/vTI5D7kw0q5PeOkpnuwNpwK4fUvQMCVDPjv1AK58FSg2xlfw0w/CPPUVBw9mD5Lyc1W0TR8Gm/2+w==",
   "success": true,
   "projectFilePath": "G:\\csharp2\\soundyAPI\\SoundyAPI\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
@@ -37,6 +37,9 @@
     "C:\\Users\\Tolyakipyatok\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Tolyakipyatok\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Tolyakipyatok\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
+    "C:\\Users\\Tolyakipyatok\\.nuget\\packages\\nlog\\5.1.1\\nlog.5.1.1.nupkg.sha512",
+    "C:\\Users\\Tolyakipyatok\\.nuget\\packages\\nlog.extensions.logging\\5.2.1\\nlog.extensions.logging.5.2.1.nupkg.sha512",
+    "C:\\Users\\Tolyakipyatok\\.nuget\\packages\\nlog.web.aspnetcore\\5.2.1\\nlog.web.aspnetcore.5.2.1.nupkg.sha512",
     "C:\\Users\\Tolyakipyatok\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\Tolyakipyatok\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "C:\\Users\\Tolyakipyatok\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",

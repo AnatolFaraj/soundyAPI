@@ -1,0 +1,15 @@
+G:\csharp2\soundyAPI\SoundyAPI\LoggerService\bin\Debug\net5.0\LoggerService.deps.json
+G:\csharp2\soundyAPI\SoundyAPI\LoggerService\bin\Debug\net5.0\LoggerService.dll
+G:\csharp2\soundyAPI\SoundyAPI\LoggerService\bin\Debug\net5.0\ref\LoggerService.dll
+G:\csharp2\soundyAPI\SoundyAPI\LoggerService\bin\Debug\net5.0\LoggerService.pdb
+G:\csharp2\soundyAPI\SoundyAPI\LoggerService\bin\Debug\net5.0\Core.dll
+G:\csharp2\soundyAPI\SoundyAPI\LoggerService\bin\Debug\net5.0\Core.pdb
+G:\csharp2\soundyAPI\SoundyAPI\LoggerService\obj\Debug\net5.0\LoggerService.csproj.AssemblyReference.cache
+G:\csharp2\soundyAPI\SoundyAPI\LoggerService\obj\Debug\net5.0\LoggerService.GeneratedMSBuildEditorConfig.editorconfig
+G:\csharp2\soundyAPI\SoundyAPI\LoggerService\obj\Debug\net5.0\LoggerService.AssemblyInfoInputs.cache
+G:\csharp2\soundyAPI\SoundyAPI\LoggerService\obj\Debug\net5.0\LoggerService.AssemblyInfo.cs
+G:\csharp2\soundyAPI\SoundyAPI\LoggerService\obj\Debug\net5.0\LoggerService.csproj.CoreCompileInputs.cache
+G:\csharp2\soundyAPI\SoundyAPI\LoggerService\obj\Debug\net5.0\LoggerService.csproj.CopyComplete
+G:\csharp2\soundyAPI\SoundyAPI\LoggerService\obj\Debug\net5.0\LoggerService.dll
+G:\csharp2\soundyAPI\SoundyAPI\LoggerService\obj\Debug\net5.0\ref\LoggerService.dll
+G:\csharp2\soundyAPI\SoundyAPI\LoggerService\obj\Debug\net5.0\LoggerService.pdb

@@ -14,15 +14,18 @@ namespace WebAPI.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IUserRepository _usersManager;
+        private readonly ILoggerManager _logger;
 
-        public UsersController(IUserRepository usersManager)
+        public UsersController(IUserRepository usersManager, ILoggerManager loggerManager)
         {
             _usersManager = usersManager;
+            _logger = loggerManager;
         }
 
         [HttpGet("")]
         public async Task<ActionResult<GetAllUsersDTO>> GetAllUsersAsync()
         {
+            _logger.LogInfo("Let's get all the users");
             var allUsersDTO = await _usersManager.GetAllUsersAsync();
 
             return Ok(allUsersDTO);

@@ -65,3 +65,9 @@ G:\csharp2\soundyAPI\SoundyAPI\WebAPI\bin\Debug\net5.0\DAL.pdb
 G:\csharp2\soundyAPI\SoundyAPI\WebAPI\bin\Debug\net5.0\Core.pdb
 G:\csharp2\soundyAPI\SoundyAPI\WebAPI\bin\Debug\net5.0\BLL.dll
 G:\csharp2\soundyAPI\SoundyAPI\WebAPI\bin\Debug\net5.0\BLL.pdb
+G:\csharp2\soundyAPI\SoundyAPI\WebAPI\bin\Debug\net5.0\nlog.config
+G:\csharp2\soundyAPI\SoundyAPI\WebAPI\bin\Debug\net5.0\NLog.dll
+G:\csharp2\soundyAPI\SoundyAPI\WebAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+G:\csharp2\soundyAPI\SoundyAPI\WebAPI\bin\Debug\net5.0\NLog.Web.AspNetCore.dll
+G:\csharp2\soundyAPI\SoundyAPI\WebAPI\bin\Debug\net5.0\LoggerService.dll
+G:\csharp2\soundyAPI\SoundyAPI\WebAPI\bin\Debug\net5.0\LoggerService.pdb
