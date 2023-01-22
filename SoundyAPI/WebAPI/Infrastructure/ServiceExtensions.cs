@@ -1,4 +1,5 @@
-﻿using BLL.Users;
+﻿using BLL.Tracks;
+using BLL.Users;
 using Core.Interfaces;
 using LoggerService;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +25,7 @@ namespace WebAPI.Infrastructure
         public static void AddDependencies(this IServiceCollection services)
         {
             services.AddScoped<IUserRepository, UsersManager>();
+            services.AddScoped<ITrackRepository, TracksManager>();
         }
 
         public static void AddLoggerService(this IServiceCollection services)

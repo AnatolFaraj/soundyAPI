@@ -25,8 +25,12 @@ namespace WebAPI.Controllers
         [HttpGet("")]
         public async Task<ActionResult<GetAllUsersDTO>> GetAllUsersAsync()
         {
-            _logger.LogInfo("Let's get all the users");
             var allUsersDTO = await _usersManager.GetAllUsersAsync();
+
+            if(allUsersDTO is null)
+            {
+                return NoContent();
+            }
 
             return Ok(allUsersDTO);
         }
@@ -35,6 +39,11 @@ namespace WebAPI.Controllers
         public async Task<ActionResult<GetUserDTO>> GetUserByIdAsync(long Id)
         {
             var userDTO = await _usersManager.GetUserByIdAsync(Id);
+
+            if(userDTO is null)
+            {
+                return NotFound();
+            }
 
             return Ok(userDTO);
         }

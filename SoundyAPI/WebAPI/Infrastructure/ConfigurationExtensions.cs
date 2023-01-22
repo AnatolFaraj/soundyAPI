@@ -1,5 +1,10 @@
-﻿using Microsoft.AspNetCore.Builder;
-
+﻿using Core.Interfaces;
+using Core.Models;
+using LoggerService.CustomExceptionMiddleware;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Http;
+using System.Net;
 
 namespace WebAPI.Infrastructure
 {
@@ -14,6 +19,12 @@ namespace WebAPI.Infrastructure
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
                 options.RoutePrefix = string.Empty;
             });
+
+        }
+
+        public static void UseCustomExceptionMiddleware(this IApplicationBuilder app)
+        {
+            app.UseMiddleware<ExceptionMiddleware>();
         }
     }
 }

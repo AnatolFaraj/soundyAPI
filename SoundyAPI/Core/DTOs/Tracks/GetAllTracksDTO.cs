@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Enums
+namespace Core.DTOs.Tracks
 {
-    public enum UserType
+    public class GetAllTracksDTO
     {
-        User = 1,
-        PremiumUser = 2,
-        Admin = 3,
-        Artist = 4
+        public List<GetTrackByIdDTO> AllTracks { get; set; }
     }
 }

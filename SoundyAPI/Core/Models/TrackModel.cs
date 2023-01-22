@@ -17,6 +17,7 @@ namespace Core.Models
         public AlbumModel Album { get; set; }
         public long CategoryId { get; set; }
         public CategoryModel Category { get; set; }
+        public string TrackFile { get; set; }
         public ICollection<PlaylistTrackModel> PlaylistTracks { get; set; }
         
 

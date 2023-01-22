@@ -6,7 +6,7 @@ using Microsoft.Extensions.Hosting;
 using NLog;
 using WebAPI.Infrastructure;
 using System.IO;
-
+using Core.Interfaces;
 
 namespace WebAPI
 {
@@ -39,6 +39,8 @@ namespace WebAPI
             {
                 app.UseSwaggerStartPage();
             }
+
+            app.UseCustomExceptionMiddleware();
 
             app.UseHttpsRedirection();
 
