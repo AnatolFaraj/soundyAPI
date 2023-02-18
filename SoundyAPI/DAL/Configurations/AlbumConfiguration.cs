@@ -29,6 +29,9 @@ namespace DAL.Configurations
             builder.HasMany(x => x.Tracks)
                 .WithOne(x => x.Album);
 
+            builder.Property(x => x.Listenings)
+                .HasDefaultValue(0);
+
             
         }
     }

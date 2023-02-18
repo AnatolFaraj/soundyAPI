@@ -1,4 +1,6 @@
-﻿using BLL.Tracks;
+﻿using BLL.Albums;
+using BLL.Artists;
+using BLL.Tracks;
 using BLL.Users;
 using Core.Interfaces;
 using LoggerService;
@@ -26,6 +28,8 @@ namespace WebAPI.Infrastructure
         {
             services.AddScoped<IUserRepository, UsersManager>();
             services.AddScoped<ITrackRepository, TracksManager>();
+            services.AddScoped<IArtistRepository, ArtistsManager>();
+            services.AddScoped<IAlbumRepository, AlbumsManager>();
         }
 
         public static void AddLoggerService(this IServiceCollection services)

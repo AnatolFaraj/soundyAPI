@@ -1,10 +1,12 @@
 ﻿using Core.DTOs;
+using Core.Exceptions;
 using Core.Interfaces;
 using DAL.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -50,6 +52,15 @@ namespace BLL.Users
                     LastLoginDate = x.Credential.LastLoginDate
                 
                 }).FirstOrDefaultAsync();
+
+            if(userModel is null)
+            {
+                throw new CustomResponseException()
+                {
+                    StatusCode = (int)HttpStatusCode.NotFound,
+                    ErrorDescription = $"User with id {userId} doesn't exist"
+                };
+            }
 
             return userModel;
         }

@@ -15,7 +15,7 @@ namespace Core.Interfaces
 
         public Task<GetTrackByIdDTO> CreateTrack(CreateTrackDTO createTrackDTO);
 
-        public Task<CreateTrackDTO> EditTrack(long trackId, CreateTrackDTO createTrackDTO);
+        public Task<GetTrackByIdDTO> EditTrack(long trackId, CreateTrackDTO createTrackDTO);
 
         public Task DeleteTrack(long trackId);
     }

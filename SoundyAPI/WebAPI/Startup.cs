@@ -7,6 +7,7 @@ using NLog;
 using WebAPI.Infrastructure;
 using System.IO;
 using Core.Interfaces;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 namespace WebAPI
 {

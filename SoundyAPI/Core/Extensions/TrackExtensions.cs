@@ -23,5 +23,20 @@ namespace Core.Extensions
                 TrackFile = trackModel.TrackFile
             };
         }
+
+        public static void FromDTO(this TrackModel trackModel, CreateTrackDTO createTrackDTO, AlbumModel trackContents)
+        {
+            trackModel.Album = trackContents;
+            trackModel.Category = trackContents.Category;
+            trackModel.Artist = trackContents.Artist;
+            trackModel.AlbumId = trackContents.Id;
+            trackModel.CategoryId = trackContents.CategoryId;
+            trackModel.ArtistId = trackContents.ArtistId;
+            trackModel.Title = createTrackDTO.Title;
+            trackModel.TrackFile = createTrackDTO.TrackFile;
+            trackModel.TrackDetail.Picture = trackContents.Picture;
+            trackModel.TrackDetail.ReleaseDate = trackContents.ReleaseDate;
+
+        }
     }
 }

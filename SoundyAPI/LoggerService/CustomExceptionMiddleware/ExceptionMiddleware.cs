@@ -1,4 +1,5 @@
-﻿using Core.Interfaces;
+﻿using Core.Exceptions;
+using Core.Interfaces;
 using Core.Models;
 using Microsoft.AspNetCore.Http;
 using System;
@@ -37,8 +38,21 @@ namespace LoggerService.CustomExceptionMiddleware
                 _logger.LogError($"A new violation exception has been thrown: {avex}");
                 await HandleExceptionAsync(httpContext, avex);
             }
+            catch (CustomResponseException cre)
+            {
+                httpContext.Response.StatusCode = cre.StatusCode;
+                httpContext.Response.ContentType = "application/json";
+                await httpContext.Response
+                    .WriteAsync(new ErrorDetailsModel() 
+                    { 
+                        StatusCode = cre.StatusCode, 
+                        Message = cre.ErrorDescription
+                    
+                    }.ToString());
+            }
             catch (Exception ex)
             {
+                
                 _logger.LogError($"Something went wrong: {ex}");
                 await HandleExceptionAsync(httpContext, ex);
                 
@@ -54,7 +68,7 @@ namespace LoggerService.CustomExceptionMiddleware
             {
                 AccessViolationException => "Access violation error from the custom middleware.",
                 NotImplementedException => "Sorry, the reqired logic is to be implemented soon",
-                _ => "Internal Server Error from custom middleware."
+                _ => $"Internal Server Error from custom middleware. {exception.Message}"
             };
 
             await context.Response.WriteAsync(new ErrorDetailsModel()

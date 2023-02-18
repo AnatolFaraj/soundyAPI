@@ -33,7 +33,9 @@ namespace DAL.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<long>("Listenings")
-                        .HasColumnType("bigint");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasDefaultValue(0L);
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
@@ -67,7 +69,9 @@ namespace DAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<long>("ListeningsLastMonth")
-                        .HasColumnType("bigint");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasDefaultValue(0L);
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");

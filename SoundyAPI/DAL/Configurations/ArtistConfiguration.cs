@@ -27,6 +27,9 @@ namespace DAL.Configurations
 
             builder.HasMany(x => x.UserArtists)
                 .WithOne(x => x.Artist);
+
+            builder.Property(x => x.ListeningsLastMonth)
+                .HasDefaultValue(0);
                 
         }
     }

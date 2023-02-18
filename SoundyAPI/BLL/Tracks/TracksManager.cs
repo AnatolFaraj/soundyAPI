@@ -1,11 +1,14 @@
 ﻿using Core.DTOs.Tracks;
+using Core.Exceptions;
 using Core.Extensions;
 using Core.Interfaces;
 using Core.Models;
 using DAL.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,30 +24,39 @@ namespace BLL.Tracks
         }
         public async Task<GetTrackByIdDTO> CreateTrack(CreateTrackDTO createTrackDTO)
         {
+
+            var trackDetailAlbumArtistCategory = await _dbContext.Albums
+                .Where(x => x.Id == createTrackDTO.AlbumId)
+                .Include(x => x.Artist)
+                .Include(x => x.Category)
+                .FirstOrDefaultAsync();
+
+            if(trackDetailAlbumArtistCategory is null)
+            {
+                throw new CustomResponseException()
+                {
+                    StatusCode = (int)HttpStatusCode.BadRequest,
+                    ErrorDescription = $"Album with id {createTrackDTO.AlbumId} doesn't exist"
+                };
+            }
+
             var newTrackDetailModel = new TrackDetailModel()
             {
-                ReleaseDate = _dbContext.Albums
-                .Where(x => x.Id == createTrackDTO.AlbumId)
-                .Select(x => x.ReleaseDate)
-                .FirstOrDefault(),
-
-                Picture = _dbContext.Albums
-                .Where(x => x.Id == createTrackDTO.AlbumId)
-                .Select(x => x.Picture)
-                .FirstOrDefault()
+                ReleaseDate = trackDetailAlbumArtistCategory.ReleaseDate,
+                Picture = trackDetailAlbumArtistCategory.Picture
             };
 
             var newTrackModel = new TrackModel()
             {
                 Title = createTrackDTO.Title,
-                ArtistId = createTrackDTO.ArtistId,
+                ArtistId = trackDetailAlbumArtistCategory.ArtistId,
                 AlbumId = createTrackDTO.AlbumId,
-                CategoryId = createTrackDTO.CategoryId,
+                CategoryId = trackDetailAlbumArtistCategory.CategoryId,
                 TrackFile = createTrackDTO.TrackFile,
                 TrackDetail = newTrackDetailModel,
-                Album = _dbContext.Albums.Where(x => x.Id == createTrackDTO.AlbumId).FirstOrDefault(),
-                Artist = _dbContext.Artists.Where(x => x.Id == createTrackDTO.ArtistId).FirstOrDefault(),
-                Category = _dbContext.Categories.Where(x => x.Id == createTrackDTO.CategoryId).FirstOrDefault()
+                Album = trackDetailAlbumArtistCategory,
+                Artist = trackDetailAlbumArtistCategory.Artist,
+                Category = trackDetailAlbumArtistCategory.Category
 
             };
 
@@ -59,24 +71,115 @@ namespace BLL.Tracks
             
         }
 
-        public Task DeleteTrack(long trackId)
+        public async Task DeleteTrack(long trackId)
         {
-            throw new NotImplementedException();
+            var trackModel = await _dbContext.Tracks
+                .Where(x => x.Id == trackId)
+                .FirstOrDefaultAsync();
+
+            if(trackModel is null)
+            {
+                throw new CustomResponseException()
+                {
+                    StatusCode = (int)HttpStatusCode.BadRequest,
+                    ErrorDescription = $"Track with id {trackId} doesn't exist"
+                };
+            }
+
+             _dbContext.Remove(trackModel);
+            await _dbContext.SaveChangesAsync();
+            
         }
 
-        public Task<CreateTrackDTO> EditTrack(long trackId, CreateTrackDTO createTrackDTO)
+        public async Task<GetTrackByIdDTO> EditTrack(long trackId, CreateTrackDTO createTrackDTO)
         {
-            throw new NotImplementedException();
+            var trackModel = await _dbContext.Tracks
+                .Where(x => x.Id == trackId)
+                .Include(x => x.TrackDetail)
+                .FirstOrDefaultAsync();
+            
+            if(trackModel is null)
+            {
+                throw new CustomResponseException()
+                {
+                    StatusCode = (int)HttpStatusCode.BadRequest,
+                    ErrorDescription = $"Track with id {trackId} doesn't exist"
+                };
+            }
+
+            var trackContents = await _dbContext.Albums
+                .Where(x => x.Id == createTrackDTO.AlbumId)
+                .Include(x => x.Artist)
+                .Include(x => x.Category)
+                .FirstOrDefaultAsync();
+
+            if(trackContents is null)
+            {
+                throw new CustomResponseException()
+                {
+                    StatusCode = (int)HttpStatusCode.BadRequest,
+                    ErrorDescription = $"Album with id {createTrackDTO.AlbumId} doesn't exist"
+                };
+            }
+
+
+            
+             trackModel.FromDTO(createTrackDTO, trackContents);
+
+             await _dbContext.SaveChangesAsync();
+            
+
+            return trackModel.ToDTO();
+
         }
 
-        public Task<GetAllTracksDTO> GetAllTracksDTO()
+        public async Task<GetAllTracksDTO> GetAllTracksDTO()
         {
-            throw new NotImplementedException();
+            var trackDTO = await _dbContext.Tracks
+                .Select(t => new GetTrackByIdDTO() 
+                { 
+                    Title = t.Title,
+                    AlbumName = t.Album.Name,
+                    ArtistName = t.Artist.Name,
+                    CategoryName = t.Category.Name,
+                    ReleaseDate = t.TrackDetail.ReleaseDate,
+                    Picture = t.TrackDetail.Picture,
+                    TrackFile = t.TrackFile
+                
+                }).ToListAsync();
+
+            return new GetAllTracksDTO()
+            { 
+                AllTracks = trackDTO 
+            };
         }
 
-        public Task<GetTrackByIdDTO> GetTrackById(long id)
+        public async Task<GetTrackByIdDTO> GetTrackById(long id)
         {
-            throw new NotImplementedException();
+            var trackDTO = await _dbContext.Tracks
+                .Where(x => x.Id == id)
+                .Select(t => new GetTrackByIdDTO() 
+                {
+                    Title = t.Title,
+                    AlbumName = t.Album.Name,
+                    ArtistName = t.Artist.Name,
+                    CategoryName = t.Category.Name,
+                    ReleaseDate = t.TrackDetail.ReleaseDate,
+                    Picture = t.TrackDetail.Picture,
+                    TrackFile = t.TrackFile
+
+                }).FirstOrDefaultAsync();
+
+            if(trackDTO is null)
+            {
+                throw new CustomResponseException()
+                {
+                    StatusCode = (int)HttpStatusCode.NotFound,
+                    ErrorDescription = $"Track with id {id} not found"
+                };
+            }
+
+            return trackDTO;
         }
     }
 }

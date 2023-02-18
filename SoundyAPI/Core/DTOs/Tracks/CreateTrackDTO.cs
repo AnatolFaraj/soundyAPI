@@ -10,11 +10,7 @@ namespace Core.DTOs.Tracks
     {
         public string Title { get; set; }
 
-        public long ArtistId { get; set; }
-
         public long AlbumId { get; set; }
-
-        public long CategoryId { get; set; }
 
         public string TrackFile { get; set; }
 
